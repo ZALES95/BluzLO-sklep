@@ -1,0 +1,160 @@
+@use "../../scss/colors" as *;
+
+.cartPage {
+	display: flex;
+	flex-direction: column;
+	padding: 7.5rem 3rem;
+	min-height: 80vh;
+	padding-top: 0;
+	gap: 3rem;
+}
+
+.productsBox {
+	display: flex;
+	flex-direction: column;
+}
+
+.singleProduct {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 3rem 0;
+	border-bottom: 1px solid $sectionBorder;
+}
+
+.top,
+.bottom {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.top {
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.bottom {
+	display: flex;
+	flex-direction: column;
+}
+
+.mainImg {
+	width: 50px;
+	object-fit: cover;
+	aspect-ratio: 1/1;
+}
+
+.titlesBox {
+	text-transform: capitalize;
+}
+
+.title {
+	font-weight: 700;
+	color: $mainText;
+}
+.subTitle {
+	color: $mainText;
+}
+
+.oldPrice {
+	text-decoration: line-through;
+	color: #05104077;
+}
+
+.newPrice {
+	margin-left: 0.6rem;
+}
+
+.paramBox {
+	display: flex;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+.sumBox {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.removeBtn {
+	font-size: 1.5rem;
+	background: none;
+	width: fit-content;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.removeDesktop {
+	display: none;
+	padding: 1rem;
+	padding-right: 0;
+}
+.removeMobile {
+	display: block;
+	align-self: flex-start;
+	justify-self: flex-end;
+	padding-top: 0.5rem;
+}
+
+.restartBtn {
+	width: fit-content;
+}
+
+.totalPrice {
+	margin-bottom: 2rem;
+	margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+	.product {
+		padding: 10.5rem 2rem;
+		padding-top: 0;
+	}
+
+	.singleProduct {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 3rem;
+		padding: 3rem 1.5rem;
+	}
+
+	.removeBtn {
+		font-size: 1.8rem;
+	}
+
+	.top,
+	.bottom {
+		gap: 2rem;
+	}
+
+	.bottom {
+		flex-direction: row;
+	}
+
+	.mainImg {
+		width: 70px;
+	}
+
+	.removeDesktop {
+		display: block;
+	}
+
+	.removeMobile {
+		display: none;
+	}
+
+	.paramBox {
+		gap: 4rem;
+	}
+	.sumBox {
+		margin-left: 2rem;
+	}
+	.totalPrice {
+		margin-bottom: 2.5rem;
+		margin-top: 2rem;
+	}
+}

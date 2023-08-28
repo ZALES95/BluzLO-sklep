@@ -1,0 +1,120 @@
+@use "../../scss/colors" as *;
+
+.singleBlogArticle {
+	padding: 7.5rem 3rem;
+}
+
+.heading {
+	font-size: 3.6rem;
+	margin-bottom: 3.5rem;
+	font-weight: 700;
+}
+
+.postBody {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.smallHeader {
+	font-weight: 700;
+
+	&:last-of-type {
+		margin-bottom: 1.8rem;
+	}
+}
+
+.desc {
+	margin-top: 1.8rem;
+	padding-left: 2rem;
+	margin-bottom: 3.5rem;
+
+	&::before {
+		content: "➤";
+		color: $contrast;
+		font-weight: 700;
+		font-size: 1.8rem;
+		margin-right: 1rem;
+	}
+}
+
+.img {
+	overflow: hidden;
+	object-fit: cover;
+	width: 100%;
+	aspect-ratio: 5/4;
+}
+
+.link {
+	color: $mainText;
+	font-weight: 700;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.links {
+     padding: 2rem 0;
+     display: flex;
+     flex-direction: column;
+     gap: 3rem;
+     align-self: flex-start;
+     justify-content: center;
+}
+
+.title {
+	margin: 2rem 0rem 1.4rem;
+	color: $mainText;
+}
+
+.posts {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+}
+
+@media (min-width: 576px) {
+	.posts {
+		grid-template-columns: 1fr 1fr;
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 992px) {
+	.title {
+		margin: 2.4rem 0rem 1.8rem;
+	}
+	.singleBlogArticle {
+		padding: 10.5rem 2rem;
+	}
+	.postBody {
+		gap: 1.5rem;
+		max-width: 60%;
+	}
+	.heading {
+		font-size: 4.8rem;
+		margin-bottom: 5rem;
+		text-align: left;
+	}
+	.desc {
+		margin-top: 2.5rem;
+
+		&:last-of-type {
+			margin-bottom: 5rem;
+		}
+	}
+
+	.smallHeader {
+		&:last-of-type {
+			margin-bottom: 2.5rem;
+		}
+	}
+	.posts {
+		grid-template-columns: 1fr 1fr 1fr;
+		flex-direction: row;
+		gap: 50px;
+	}
+}

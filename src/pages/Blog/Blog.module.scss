@@ -1,0 +1,41 @@
+@use "../../scss/colors" as *;
+
+.blog {
+	padding: 7.5rem 3rem;
+	min-height: 80vh;
+}
+
+.heading {
+	font-size: 3.6rem;
+	margin-bottom: 3.5rem;
+	font-weight: 700;
+}
+
+.posts {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+}
+
+@media (min-width: 576px) {
+	.posts {
+		grid-template-columns: 1fr 1fr;
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 992px) {
+	.blog {
+		padding: 10.5rem 2rem;
+	}
+	.posts {
+		grid-template-columns: 1fr 1fr 1fr;
+		flex-direction: row;
+		gap: 50px;
+	}
+	.heading {
+		font-size: 4.8rem;
+		margin-bottom: 5rem;
+		text-align: left;
+	}
+}

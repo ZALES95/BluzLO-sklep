@@ -1,0 +1,123 @@
+@use "../../scss/colors" as *;
+@use "../../scss/mixins" as *;
+
+.header {
+	color: $pureWhite;
+	.heroImg {
+		@include heroImg("../../assets/headerMobile.webp");
+		height: calc(100vh - 379px);
+		min-height: 600px;
+	}
+
+	.mainHeader {
+		font-size: 4.8rem;
+		text-align: center;
+		font-weight: 700;
+		line-height: 125%;
+		letter-spacing: -0.5px;
+		max-width: 400px;
+	}
+
+	.heroName {
+		color: $contrast;
+	}
+
+	.buttons {
+		margin: 2.4rem 0;
+	}
+
+	.infoText {
+		color: $pureWhite;
+		transition: opacity 0.3s;
+		margin-top: -0.8rem;
+          display: none;
+
+		// &:hover {
+		// 	opacity: 0.8;
+		// }
+	}
+
+	.icons {
+		display: flex;
+		margin-top: -2.4rem;
+		font-size: 2.3rem;
+
+		.fa-icon {
+			color: $pureWhite;
+			transition: opacity 0.3s;
+			padding: 0.8rem;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.features {
+		display: flex;
+		flex-direction: column;
+		color: $mainText;
+	}
+	.feature {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.8rem;
+		font-size: 2.3rem;
+		background-color: $lightGray;
+		padding: 2.6rem 0.8rem;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		&--highlighted {
+			background-color: $contrast;
+		}
+
+		.fa-icon {
+			font-size: 3.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		.heroImg {
+			background-image: url("../../assets/headerDesktop.webp");
+			height: calc(100vh - 157px);
+			min-height: 550px;
+			max-height: 1100px;
+		}
+
+		.mainHeader {
+			font-size: 6.4rem;
+			max-width: 700px;
+			letter-spacing: -1px;
+		}
+
+		.buttons {
+			display: flex;
+			gap: 3.2rem;
+		}
+		.icons {
+			font-size: 2.8rem;
+			margin-top: 0.8rem;
+
+			.fa-brands {
+				padding: 1rem;
+			}
+		}
+
+		.infoText {
+			margin-top: 0rem;
+               display: block;
+		}
+
+		.features {
+			flex-direction: row;
+		}
+		.feature {
+			flex: 1;
+			gap: 1rem;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@use "./colors" as *;
+
+@mixin heroImg($url) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-image: url($url);
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+}
+
+@mixin link {
+	padding: 1.5rem;
+	color: $mainText;
+	text-transform: capitalize;
+	font-weight: 700;
+}

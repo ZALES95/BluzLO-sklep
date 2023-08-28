@@ -1,0 +1,62 @@
+@use "../../scss/colors" as *;
+
+.question,
+.answer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid $sectionBorder;
+	padding: 2rem;
+	border-bottom: none;
+
+	&:last-of-type {
+		border-bottom: 1px solid $sectionBorder;
+	}
+}
+
+.question {
+     &:hover {
+          cursor: pointer;
+     }
+}
+
+.icon {
+	font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+	.stages {
+		gap: 50px 100px;
+	}
+
+	.filmBox {
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-top: 6.4rem;
+	}
+
+	.link {
+		justify-self: flex-end;
+		text-align: right;
+		max-width: 600px;
+	}
+
+	.icon {
+		font-size: 4.8rem;
+		margin-bottom: 0;
+	}
+
+	.iconLink {
+		order: 1;
+		margin-left: 1.8rem;
+	}
+
+	.question,
+	.answer {
+		padding: 3rem;
+	}
+
+	.icon {
+		font-size: 1.8rem;
+	}
+}

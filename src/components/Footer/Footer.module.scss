@@ -1,0 +1,108 @@
+@use "../../scss/colors" as *;
+@use "../../scss/mixins" as *;
+
+.topBorder {
+	border-top: 1px solid $sectionBorder;
+	border-bottom: 1px solid $sectionBorder;
+}
+
+.top {
+	display: flex;
+	padding: 3rem;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.bottom {
+	padding: 1rem;
+	text-align: center;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	font-weight: 700;
+}
+
+.right {
+	display: none;
+}
+
+.img {
+	width: 120px;
+	height: auto;
+}
+
+.phone {
+	color: $mainText;
+	margin-top: 1.2rem;
+}
+.mail {
+	color: $mainText;
+}
+
+.icons {
+	display: flex;
+	gap: 1.2rem;
+}
+
+.linksSection {
+	padding: 0 5rem;
+	border-left: 1px solid $sectionBorder;
+}
+
+.list {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.title {
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+}
+
+.link {
+	color: $mainText;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@media (min-width: 992px) {
+	.allLinks {
+		position: static;
+		flex-direction: row;
+	}
+
+	.img {
+		width: 130px;
+	}
+
+	.top {
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 3rem 2rem;
+	}
+
+	.right {
+		display: flex;
+	}
+
+	.left {
+		align-items: flex-start;
+	}
+
+	.bottom {
+		padding: 1.2rem;
+		padding-right: 2rem;
+		text-align: right;
+	}
+}

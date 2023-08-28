@@ -1,0 +1,15 @@
+@use "../../scss/colors" as *;
+
+.ourRealizations {
+	padding: 10rem 3rem;
+	padding-top: 3rem;
+
+}
+
+
+@media (min-width: 992px) {
+	.ourRealizations {
+		padding: 13rem 5rem;
+		padding-top: 5rem;
+	}
+}

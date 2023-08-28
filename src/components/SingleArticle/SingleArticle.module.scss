@@ -1,0 +1,28 @@
+@use "../../scss/colors" as *;
+
+.post {
+	display: flex;
+	flex-direction: column;
+}
+
+.img {
+	overflow: hidden;
+	object-fit: cover;
+	width: 100%;
+     aspect-ratio: 5/4;
+}
+
+.title {
+	margin: 2rem 0rem 1.4rem;
+	color: $mainText;
+}
+
+.btn {
+	align-self: start;
+}
+
+@media (min-width: 992px) {
+	.title {
+		margin: 2.4rem 0rem 1.8rem;
+	}
+}

@@ -1,0 +1,37 @@
+@use "../../scss/colors" as *;
+
+.productsBox {
+	display: grid;
+	gap: 20px;
+}
+
+.link {
+	display: flex;
+	justify-content: center;
+	margin-top: 4.8rem;
+	font-weight: 700;
+	color: $mainText;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@media (min-width: 476px) {
+	.productsBox {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 992px) {
+	.productsBox {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+}
+@media (min-width: 1200px) {
+	.productsBox {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

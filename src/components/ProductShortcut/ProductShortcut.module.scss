@@ -1,0 +1,102 @@
+@use "../../scss/colors" as *;
+
+.productShortcut {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	padding: 1rem;
+	transition: box-shadow 0.3s;
+
+	&:hover {
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+			rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	}
+}
+
+.time {
+	position: absolute;
+	background-color: $mainText;
+	color: $pureWhite;
+	padding: 1rem 2rem;
+	font-size: 1.3rem;
+	right: 0;
+	top: 1rem;
+}
+
+.img {
+	align-self: center;
+	object-fit: cover;
+	width: 90%;
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.desc {
+	width: 100%;
+
+	position: relative;
+}
+
+.title {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	font-weight: 700;
+	color: $mainText;
+}
+
+.colors {
+	display: flex;
+	gap: 0.8rem;
+	margin-top: 0.8rem;
+	flex-wrap: wrap;
+}
+
+.color {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid $sectionBorder;
+}
+.price {
+	position: absolute;
+	top: -25px;
+	font-size: 1.5rem;
+	left: 10px;
+	color: $mainText;
+}
+
+.oldPrice {
+	text-decoration: line-through;
+	color: #05104095;
+}
+
+.newPrice {
+	margin-left: 0.6rem;
+}
+
+@media (min-width: 992px) {
+	.time {
+		font-size: 1.5rem;
+		padding: 1.2rem 2.4rem;
+	}
+
+	.title {
+		font-size: 1.8rem;
+	}
+
+	.colors {
+		margin-top: 1.2rem;
+		gap: 1.2rem;
+	}
+
+	.color {
+		width: 25px;
+		height: 25px;
+	}
+
+	.price {
+		font-size: 1.8rem;
+		top: -30px;
+	}
+}

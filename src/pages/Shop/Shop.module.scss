@@ -1,0 +1,91 @@
+@use "../../scss/colors" as *;
+
+.shop {
+	padding: 7.5rem 3rem;
+	min-height: 80vh;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	font-size: 3.6rem;
+	margin-bottom: 2.5rem;
+	font-weight: 700;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.bottom {
+	margin-top: 5rem;
+	padding-bottom: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 1px solid $sectionBorder;
+}
+
+.allButtons {
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.catInfo {
+	text-transform: capitalize;
+	font-weight: 700;
+}
+
+.allProducts {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2.5rem;
+	margin-top: 5rem;
+}
+
+@media (min-width: 576px) {
+	.allProducts {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 992px) {
+	.shop {
+		padding: 10.5rem 2rem;
+	}
+
+	.top {
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.heading {
+		font-size: 4.8rem;
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.bottom {
+		margin-top: 7rem;
+		padding-bottom: 3rem;
+		align-items: flex-start;
+	}
+	.allButtons {
+		margin-top: 3.5rem;
+		justify-content: flex-start;
+		gap: 3rem;
+	}
+	.allProducts {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 3.5rem;
+		margin-top: 7rem;
+	}
+}

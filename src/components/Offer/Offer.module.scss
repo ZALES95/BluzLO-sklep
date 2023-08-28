@@ -1,0 +1,48 @@
+@use "../../scss/mixins" as *;
+@use "../../scss/colors" as *;
+
+.offer {
+	position: relative;
+     overflow: hidden;
+}
+
+.heroImg {
+	@include heroImg("../../assets/offerHeaderMobile.webp");
+     background-attachment: fixed;
+}
+
+.info {
+	color: $pureWhite;
+	max-width: 90%;
+	margin-top: -1.8rem;
+}
+
+.buttons {
+	margin-top: 2.4rem;
+}
+
+.title {
+	color: $pureWhite;
+}
+
+@media (min-width: 476px) {
+	.info {
+		max-width: 70%;
+	}
+}
+
+@media (min-width: 992px) {
+	.info {
+		max-width: 70%;
+	}
+
+     .heroImg {
+          @include heroImg("../../assets/offerHeaderDesktop.webp");
+     }
+
+	.buttons {
+		display: flex;
+		gap: 3.2rem;
+		margin-top: 3.2rem;
+	}
+}

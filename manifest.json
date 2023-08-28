@@ -1,0 +1,32 @@
+{
+	"name": "BluzLO - Merch dla szkół, uczelni oraz firm",
+	"short_name": "BluzLO",
+	"description": "BluzLO to miejsce, gdzie znajdziesz unikalną odzież szkolną, która pozwoli Ci wyrazić swój styl i dumę z przynależności do swojej szkoły. Nasza firma oferuje szeroki wybór jakościowych produktów, które idealnie oddadzą ducha twojej placówki edukacyjnej.",
+	"start_url": ".",
+	"display": "fullscreen",
+	"background_color": "#fff",
+	"theme_color": "#FFC000",
+	"icons": [
+          {
+			"src": "logoPWA.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "logoPWA.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "logoPWA.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "logoPWA.png",
+			"sizes": "516x516",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}

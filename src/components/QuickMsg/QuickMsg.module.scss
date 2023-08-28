@@ -1,0 +1,57 @@
+@use "../../scss/colors" as *;
+
+.iconBox {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 120;
+	border-radius: 50%;
+	background-color: $pureWhite;
+	margin: 1.5rem;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	transition: background-color 0.3s;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $mainText;
+
+		.icon {
+			color: $pureWhite;
+		}
+	}
+}
+
+.msg {
+	display: none;
+}
+
+.icon {
+	font-size: 4rem;
+	transform: rotateY(180deg);
+	padding: 1.5rem;
+
+	color: $mainText;
+	transition: color 0.3s;
+}
+
+@media (min-width: 992px) {
+	// .iconBox {
+	// 	margin: 2rem;
+	// }
+	// .icon {
+	// 	font-size: 5rem;
+	// 	padding: 2rem;
+	// }
+
+	.msg {
+		display: block;
+	}
+	.phone {
+		// display: block;
+          bottom: 80px;
+	}
+}

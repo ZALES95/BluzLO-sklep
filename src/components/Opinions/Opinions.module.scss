@@ -1,0 +1,106 @@
+@use "../../scss/colors" as *;
+
+.opinions {
+	position: relative;
+	overflow: hidden;
+	background-color: $mainText;
+	color: $pureWhite;
+	margin: 3rem auto;
+	margin-bottom: 2rem;
+	max-width: 1000px;
+	width: 100%;
+	padding: 14rem 3rem;
+	text-align: center;
+}
+
+.info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -4rem;
+	gap: 6px;
+	border-bottom: 3px solid $pureWhite;
+	padding: 0 2rem;
+	padding-bottom: 5rem;
+}
+
+.rating {
+	font-size: 2.3rem;
+	font-weight: 700;
+}
+
+.stars {
+	display: flex;
+	gap: 3px;
+	color: $contrast;
+	font-size: 1.6rem;
+}
+
+.opinionsBox {
+	padding: 5rem 2rem;
+	padding-bottom: 0;
+	margin-bottom: 5rem;
+}
+
+.singleOpinion {
+	padding: 0 2rem;
+	display: flex !important;
+	flex-direction: column;
+	gap: 1.2rem;
+	align-items: center;
+}
+
+.img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.name,
+.desc {
+	color: $pureWhite;
+}
+
+.name {
+	font-weight: 700;
+}
+
+.link {
+	color: $pureWhite;
+	margin-top: 6rem;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@media (min-width: 992px) {
+	.opinions {
+		margin: 5rem auto;
+		margin-bottom: 2rem;
+		padding: 19rem 0;
+		width: 70%;
+	}
+
+	.info {
+		margin-top: -5rem;
+		padding-bottom: 7rem;
+	}
+
+	.rating {
+		font-size: 2.8rem;
+	}
+	.stars {
+		gap: 4px;
+		font-size: 1.8rem;
+	}
+
+	.opinionsBox {
+		padding: 7rem 3rem;
+		padding-bottom: 0;
+	}
+	.singleOpinion {
+		padding: 0 6rem;
+	}
+}

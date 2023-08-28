@@ -1,0 +1,170 @@
+@use "../../scss/colors" as *;
+
+.stage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 3rem;
+	position: relative;
+}
+
+.iconBox {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+	background-color: $lightGray;
+	border-radius: 50%;
+}
+
+.icon {
+	font-size: 3.6rem;
+	color: $mainText;
+}
+
+.stageNumber {
+	position: absolute;
+	font-size: 1.3rem;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: $mainText;
+	color: $pureWhite;
+	font-weight: 700;
+	left: -5px;
+	top: -5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	margin-top: 1.6rem;
+	font-weight: 700;
+}
+
+.desc {
+	text-align: center;
+	margin-top: 0.8rem;
+	max-width: 500px;
+}
+
+@media (min-width: 992px) {
+	.iconBox {
+		width: 90px;
+		height: 90px;
+	}
+
+	.icon {
+		font-size: 4.5rem;
+		color: $mainText;
+	}
+
+	.stageNumber {
+		font-size: 1.5rem;
+		width: 30px;
+		height: 30px;
+	}
+
+	.title {
+		margin-top: 2rem;
+	}
+
+	.desc {
+		margin-top: 1rem;
+		max-width: auto;
+	}
+
+	.plainDiv {
+		&:nth-child(2) {
+			border-right: 4px solid $sectionBorder;
+			grid-row: 2/4;
+			grid-column: 1/2;
+			height: 100%;
+		}
+		&:nth-child(4) {
+			border-right: 4px solid $sectionBorder;
+			grid-row: 4/5;
+			grid-column: 1/2;
+			height: 100%;
+		}
+		&:nth-child(6) {
+			border-right: 4px solid $sectionBorder;
+			grid-row: 6/7;
+			grid-column: 1/2;
+			height: 100%;
+		}
+	}
+
+	.stage {
+		&::before {
+			content: "";
+			position: absolute;
+			top: -17px;
+			background-color: $pureWhite;
+			width: 20px;
+			height: 20px;
+			border: 3px solid $sectionBorder;
+			border-radius: 50%;
+		}
+
+		&:nth-child(1) {
+			&::before {
+                    background-color: $sectionBorder;
+				right: -12px;
+			}
+			grid-row: 1/2;
+			grid-column: 1/2;
+			border-right: 4px solid $sectionBorder;
+		}
+		&:nth-child(3) {
+			&::before {
+				left: -12px;
+			}
+			grid-row: 2/3;
+			grid-column: 2/3;
+		}
+
+		&:nth-child(5) {
+               &::before {
+				right: -12px;
+			}
+			grid-row: 3/4;
+			grid-column: 1/2;
+			border-right: 4px solid $sectionBorder;
+		}
+		&:nth-child(7) {
+               &::before {
+				left: -12px;
+			}
+			grid-row: 4/5;
+			grid-column: 2/3;
+		}
+		&:nth-child(9) {
+               &::before {
+				right: -12px;
+			}
+			grid-row: 5/6;
+			grid-column: 1/2;
+			border-right: 4px solid $sectionBorder;
+		}
+		&:nth-child(11) {
+               &::before {
+				left: -12px;
+			}
+			grid-row: 6/7;
+			grid-column: 2/3;
+		}
+		&:nth-child(13) {
+               &::before {
+				right: -12px;
+			}
+			grid-row: 7/8;
+			grid-column: 1/2;
+			border-right: 4px solid $sectionBorder;
+		}
+	}
+}
