@@ -2,7 +2,7 @@
 
 .blogSection {
 	padding: 10rem 3rem;
-	padding-top: 0;
+	// padding-top: 0;
 }
 
 .posts {
@@ -14,7 +14,6 @@
 @media (min-width: 992px) {
 	.blogSection {
 		padding: 13rem 5rem;
-		padding-top: 0;
 	}
 	.posts {
 		grid-template-columns: 1fr 1fr 1fr;

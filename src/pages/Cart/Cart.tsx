@@ -5,9 +5,9 @@ import { useDispatch } from "react-redux"
 import { resetCart } from "../../redux/cartReducer"
 import { removeItem } from "../../redux/cartReducer"
 import { Link } from "react-router-dom"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { loadStripe } from "@stripe/stripe-js"
-import { makeRequest } from "../../makeRequest"
+// import { makeRequest } from "../../makeRequest"
 
 const Cart = () => {
 	useEffect(() => {
@@ -24,6 +24,8 @@ const Cart = () => {
 	useEffect(() => {
 		document.title = "BluzLO - koszyk"
 	}, [])
+
+	const [errorMsg, setErrorMsg] = useState<string>("")
 
 	const products = useSelector(
 		(state: { cart: { products: CartProductType[] } }) => state.cart.products
@@ -44,22 +46,28 @@ const Cart = () => {
 	}
 	const dispatch = useDispatch()
 
-	console.log(products)
-
 	const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY)
 
 	const handlePayment = async () => {
 		try {
 			const stripe = await stripePromise
 
-			const res = await makeRequest.post("/orders", {
-				products,
+			const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+				method: "POST",
+				body: JSON.stringify(products),
 			})
+			const responseData = await response.json()
 
 			await stripe?.redirectToCheckout({
-				sessionId: res.data.stripeSession.id,
+				sessionId: responseData?.stripeSession?.id,
 			})
+
+			setErrorMsg("")
 		} catch (err) {
+			setErrorMsg("Wystąpił błąd... Spróbuj ponownie za chwilę!")
 			console.log(err)
 		}
 	}
@@ -149,6 +157,30 @@ const Cart = () => {
 					onClick={handlePayment}>
 					Przejdź do Płatności
 				</button>
+				<p className={`smallText ${Styles.totalPrice}`}>lub</p>
+				<p className={`normalText ${Styles.title} ${Styles.totalPrice}`}>
+					Wykonaj przelew bankowy
+				</p>
+				{products.length > 0 && (
+					<div className={`smallText ${Styles.totalPrice}`}>
+						Prosimy o wpłatę bezpośrednio na nasze konto bankowe 02 2490 0005
+						0000 4530 3004 8415 Alior Bank. Prosimy skopiować i podać jako tytuł
+						płatności:{" "}
+						<p className={Styles.infotextBox}>
+							{"<Twój email, imię i nazwisko, numer telefonu> "}
+							{products?.map((el, i) => (
+								<span key={i}>
+									{el.title} {el.schoolName} {el.color} {el.size} x{el.quantity}{" "}
+								</span>
+							))}
+						</p>
+						Twoje zamówienie zostanie zrealizowane po zaksięgowaniu wpłaty na
+						naszym koncie.
+					</div>
+				)}
+				<p className={`normalText ${Styles.title} ${Styles.totalPrice}`}>
+					{errorMsg}
+				</p>
 			</div>
 		</div>
 	)

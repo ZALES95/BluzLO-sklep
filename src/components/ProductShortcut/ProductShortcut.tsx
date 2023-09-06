@@ -15,7 +15,7 @@ const ProductShortcut: React.FC<ProductShortcutType> = ({
 	mainImg,
 }) => {
 	return (
-		<Link to={`/sklep/${id.toString()}`} className={Styles.productShortcut}>
+		<Link to={`/shop/${id.toString()}`} className={Styles.productShortcut}>
 			<div className={Styles.time}>Pozostało {getTimeLeft(expirationDate)}</div>
 			<img src={mainImg} alt='Zdjęcie Produktu Bluzlo' className={Styles.img} />
 			<div className={Styles.desc}>

@@ -33,8 +33,8 @@ function App() {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />
-					<Route path='/sklep' element={<Shop />} />
-					<Route path='/sklep/:productId' element={<Product />} />
+					<Route path='/shop' element={<Shop />} />
+					<Route path='/shop/:productId' element={<Product />} />
 					<Route path='/blog' element={<Blog />} />
 					<Route path='/blog/:articleName' element={<BlogArticle />} />
 					<Route path='/cennik' element={<Pricing />} />

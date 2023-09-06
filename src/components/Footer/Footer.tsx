@@ -71,26 +71,26 @@ const Footer = () => {
 							<ul className={Styles.list}>
 								<li>
 									<a
-										href='#nasze-produkty'
+										href='/#nasze-produkty'
 										className={`${Styles.link} smallText`}>
 										nasze produkty
 									</a>
 								</li>
 								<li>
-									<a href='#oferta' className={`${Styles.link} smallText`}>
+									<a href='/#oferta' className={`${Styles.link} smallText`}>
 										oferta
 									</a>
 								</li>
 								<li>
 									<a
-										href='#etapy-realizacji'
+										href='/#etapy-realizacji'
 										className={`${Styles.link} smallText`}>
 										etapy realizacji
 									</a>
 								</li>
 								<li>
 									<a
-										href='#nasze-realizacje'
+										href='/#nasze-realizacje'
 										className={`${Styles.link} smallText`}>
 										nasze realizacje
 									</a>
@@ -101,17 +101,17 @@ const Footer = () => {
 							<p className={`${Styles.title} smallText`}>bluzlo</p>
 							<ul className={Styles.list}>
 								<li>
-									<a href='#o-nas' className={`${Styles.link} smallText`}>
+									<a href='/#o-nas' className={`${Styles.link} smallText`}>
 										dlaczego my
 									</a>
 								</li>
 								<li>
-									<a href='#wspolpraca' className={`${Styles.link} smallText`}>
+									<a href='/#wspolpraca' className={`${Styles.link} smallText`}>
 										współpraca
 									</a>
 								</li>
 								<li>
-									<a href='#opinie' className={`${Styles.link} smallText`}>
+									<a href='/#opinie' className={`${Styles.link} smallText`}>
 										opinie
 									</a>
 								</li>
@@ -137,7 +137,7 @@ const Footer = () => {
 								</li>
 
 								<li>
-									<a href='#faq' className={`${Styles.link} smallText`}>
+									<a href='/#faq' className={`${Styles.link} smallText`}>
 										FAQ
 									</a>
 								</li>

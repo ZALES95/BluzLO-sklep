@@ -12,9 +12,9 @@ import useFetch from "../../hooks/useFetch"
 
 const Product = () => {
 	const { productId } = useParams()
-	const { data, loading, error } = useFetch("/products?populate=*")
+	const { data, loading, error } = useFetch("/products")
 	const [currentProduct, setCurrentProduct] = useState<SingleProductType>()
-	const [currentMainImg, setCurrentMainImg] = useState<string>("")
+	const [currentMainImg, setCurrentMainImg] = useState<string | undefined>("")
 
 	useEffect(() => {
 		const metaTag = document.createElement("meta")
@@ -60,10 +60,7 @@ const Product = () => {
 		document.title =
 			`${currentProduct?.attributes?.title} ${currentProduct?.attributes?.schoolName}` ||
 			"BluzLO - Merch dla szkół, uczelni oraz firm"
-		setCurrentMainImg(
-			import.meta.env.VITE_UPLOAD_URL +
-				currentProduct?.attributes?.mainImg?.data?.attributes?.url
-		)
+		setCurrentMainImg(currentProduct?.attributes?.mainImg)
 		setProductForm(initialFormValue)
 	}, [currentProduct])
 
@@ -96,10 +93,7 @@ const Product = () => {
 					el => el.name === value
 				)
 				currentColorImg =
-					currentColor?.img ||
-					import.meta.env.VITE_UPLOAD_URL +
-						currentProduct?.attributes?.mainImg?.data?.attributes?.url ||
-					""
+					currentColor?.img || currentProduct?.attributes?.mainImg || ""
 				setCurrentMainImg(currentColorImg)
 			}
 			setProductForm(prevForm => ({
@@ -167,10 +161,7 @@ const Product = () => {
 				discountPrice={el.attributes?.discountPrice}
 				colors={el.attributes?.colors}
 				expirationDate={el.attributes?.expirationDate}
-				mainImg={
-					import.meta.env.VITE_UPLOAD_URL +
-					el.attributes?.mainImg?.data?.attributes?.url
-				}
+				mainImg={el.attributes?.mainImg}
 			/>
 		)
 	)
@@ -215,22 +206,14 @@ const Product = () => {
 											</div>
 											<div className={Styles.top}>
 												<div className={Styles.diffrentImages}>
-													{currentProduct?.attributes?.allVariousImages?.data?.map(
+													{currentProduct?.attributes?.allVariousImages?.map(
 														(el, i) => (
 															<img
 																key={i}
-																src={
-																	import.meta.env.VITE_UPLOAD_URL +
-																	el?.attributes?.url
-																}
+																src={el}
 																alt='produkt BluzLo'
 																className={Styles.img}
-																onClick={() =>
-																	handleCurrentImg(
-																		import.meta.env.VITE_UPLOAD_URL +
-																			el?.attributes?.url
-																	)
-																}
+																onClick={() => handleCurrentImg(el)}
 															/>
 														)
 													)}
@@ -407,13 +390,15 @@ const Product = () => {
 										</div>
 									)}
 
-									<div className={Styles.subSection}>
-										<h2 className='sectionHeading sectionHeading--singleProduct'>
-											Parametry
-										</h2>
-										<ul className={Styles.parametersBox}>
-											{Object.keys(currentProduct?.attributes?.parameters).map(
-												(key, i) => {
+									{currentProduct?.attributes?.parameters && (
+										<div className={Styles.subSection}>
+											<h2 className='sectionHeading sectionHeading--singleProduct'>
+												Parametry
+											</h2>
+											<ul className={Styles.parametersBox}>
+												{Object.keys(
+													currentProduct?.attributes?.parameters
+												).map((key, i) => {
 													return (
 														<li
 															className={`smallText ${Styles.singleParam}`}
@@ -424,30 +409,34 @@ const Product = () => {
 															</p>
 														</li>
 													)
-												}
-											)}
-										</ul>
-									</div>
-
-									<div className={Styles.subSection}>
-										<h2 className='sectionHeading sectionHeading--singleProduct'>
-											Opis
-										</h2>
-										<div className={`smallText ${Styles.mainDesc}`}>
-											{currentProduct?.attributes?.desc}
+												})}
+											</ul>
 										</div>
-									</div>
+									)}
 
-									<div className={Styles.subSection}>
-										<h2 className='sectionHeading sectionHeading--singleProduct'>
-											Tabela rozmiarów
-										</h2>
-										<img
-											src={currentProduct?.attributes?.sizingImg}
-											alt='Tabela rozmiarów bluzlo'
-											className={Styles.mainImg}
-										/>
-									</div>
+									{currentProduct?.attributes?.desc && (
+										<div className={Styles.subSection}>
+											<h2 className='sectionHeading sectionHeading--singleProduct'>
+												Opis
+											</h2>
+											<div className={`smallText ${Styles.mainDesc}`}>
+												{currentProduct?.attributes?.desc}
+											</div>
+										</div>
+									)}
+
+									{currentProduct?.attributes?.sizingImg && (
+										<div className={Styles.subSection}>
+											<h2 className='sectionHeading sectionHeading--singleProduct'>
+												Tabela rozmiarów
+											</h2>
+											<img
+												src={currentProduct?.attributes?.sizingImg}
+												alt='Tabela rozmiarów bluzlo'
+												className={Styles.mainImg}
+											/>
+										</div>
+									)}
 
 									<div className={Styles.subSection}>
 										<h2 className='sectionHeading sectionHeading--singleProduct'>

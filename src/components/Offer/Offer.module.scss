@@ -3,12 +3,12 @@
 
 .offer {
 	position: relative;
-     overflow: hidden;
+	overflow: hidden;
 }
 
 .heroImg {
-	@include heroImg("../../assets/offerHeaderMobile.webp");
-     background-attachment: fixed;
+	@include heroImg("../../assets/offerHeaderMobile2.jpg");
+	background-attachment: fixed;
 }
 
 .info {
@@ -36,9 +36,9 @@
 		max-width: 70%;
 	}
 
-     .heroImg {
-          @include heroImg("../../assets/offerHeaderDesktop.webp");
-     }
+	.heroImg {
+		@include heroImg("../../assets/offerHeaderDesktop2.jpg");
+	}
 
 	.buttons {
 		display: flex;

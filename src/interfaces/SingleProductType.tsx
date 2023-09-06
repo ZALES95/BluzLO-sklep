@@ -3,8 +3,8 @@ export interface SingleProductType {
 	attributes: {
 		schoolName: string //changes for every new school (is the same for the same school)
 		expirationDate: Date //changes for every new school (is the same for the same school)
-		mainImg: { data: { attributes: { url: string } } } //changes for every new school
-		allVariousImages: { data: { attributes: { url: string } }[] } //changes for every new school
+		mainImg: string //changes for every new school
+		allVariousImages: string[] //changes for every new school
 		allColorImages: { name: string; img: string }[] //changes for every new school
 		title: string //constant for all products with the same name
 		price: number //constant for all products with the same name

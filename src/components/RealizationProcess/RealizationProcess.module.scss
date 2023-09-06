@@ -5,7 +5,7 @@
 	grid-template-columns: 1fr;
 	justify-content: center;
 	align-items: center;
-	gap: 3.6rem 0;
+	gap: 2.4rem 0;
 }
 
 .filmBox {
@@ -35,7 +35,7 @@
 
 @media (min-width: 992px) {
 	.stages {
-		gap: 14px 0;
+		gap: 0;
 		grid-template-columns: repeat(2, 1fr);
 	}
 

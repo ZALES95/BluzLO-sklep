@@ -9,6 +9,7 @@ import Cooperation from "../../components/Cooperation/Cooperation"
 import FAQ from "../../components/FAQ/FAQ"
 import BlogSection from "../../components/BlogSection/BlogSection"
 import QuickMsg from "../../components/QuickMsg/QuickMsg"
+import EneEducation from "../../components/EneEducation/EneEducation"
 import { useEffect } from "react"
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
 				<Aboutus />
 				<Cooperation />
 				<FAQ />
+				<EneEducation />
 				<BlogSection />
 			</main>
 			<QuickMsg />

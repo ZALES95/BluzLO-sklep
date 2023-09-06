@@ -24,7 +24,7 @@ const CartPopup: React.FC<{
 			</div>
 			<div className={Styles.buttons}>
 				<Link
-					to='/sklep'
+					to='/shop'
 					className='mainBtn mainBtn--small'
 					onClick={() => handleDisplay(false)}>
 					Kontynuuj Zakupy

@@ -5,6 +5,9 @@ import Lodz from "../assets/Realizations/3loschody.webp"
 import Bielsko from "../assets/Realizations/5loBielsko.webp"
 import Radmosko from "../assets/Realizations/2loRadomsko.webp"
 import Skierniewice from "../assets/Realizations/Skierniewice.webp"
+import KTKBielsko from "../assets/Realizations/KTKBielsko.jpg"
+import Radom from "../assets/Realizations/6loRadom.jpg"
+import Torun from "../assets/Realizations/VloTorun.jpg"
 
 export const realizations: SingleRealizationType[] = [
 	{
@@ -31,6 +34,21 @@ export const realizations: SingleRealizationType[] = [
 		img: Skierniewice,
 		alt: "Realizacja I Lo Skierniewice",
 		title: "I Lo Skierniewice",
+	},
+	{
+		img: KTKBielsko,
+		alt: "Realizacja KTK Lo Bielsko-Biała",
+		title: "KTK Lo Bielsko-Biała",
+	},
+	{
+		img: Radom,
+		alt: "Realizacja VI Lo Radom",
+		title: "VI Lo Radom",
+	},
+	{
+		img: Torun,
+		alt: "Realizacja V Lo Toruń",
+		title: "V Lo Toruń",
 	},
 	{
 		img: Radmosko,

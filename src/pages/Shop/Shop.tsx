@@ -5,7 +5,7 @@ import { SingleProductType } from "../../interfaces/SingleProductType"
 import useFetch from "../../hooks/useFetch"
 
 const Shop = () => {
-	const { data, loading, error } = useFetch("/products?populate=*")
+	const { data, loading, error } = useFetch("/products")
 
 	const [allSchools, setAllSchools] = useState<string[]>([])
 	const [filteredProducts, setFilteredProducts] =
@@ -102,10 +102,7 @@ const Shop = () => {
 										discountPrice={el.attributes?.discountPrice}
 										colors={el.attributes?.colors}
 										expirationDate={el.attributes?.expirationDate}
-										mainImg={
-											import.meta.env.VITE_UPLOAD_URL +
-											el.attributes?.mainImg?.data?.attributes?.url
-										}
+										mainImg={el.attributes?.mainImg}
 									/>
 								))}
 							</>

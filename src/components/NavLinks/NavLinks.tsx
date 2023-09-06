@@ -10,7 +10,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleMobileNav, mobile }) => {
 	return (
 		<ul className={Styles.allLinks}>
 			<li onClick={handleMobileNav}>
-				<Link to='/sklep' className={`${Styles.link} link-hover`}>
+				<Link to='/shop' className={`${Styles.link} link-hover`}>
 					sklep
 				</Link>
 			</li>

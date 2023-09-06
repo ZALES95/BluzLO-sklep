@@ -1,25 +1,20 @@
 import { SingleRealizationType } from "../interfaces/SingleRealization"
 import BaseballJacket from "../assets/ourProducts/Bejsbol.webp"
-import Hoodie from "../assets/ourProducts/Kangurka.webp"
-import TShirt from "../assets/ourProducts/Koszulka.webp"
+import Hoodie from "../assets/ourProducts/Kangurka2.jpg"
+import TShirt from "../assets/ourProducts/Koszulka2.jpg"
 import Polo from "../assets/ourProducts/Polo.webp"
 import Sweatshirt from "../assets/ourProducts/Rozpinana.webp"
 import Bag from "../assets/ourProducts/Torba.webp"
 import Sack from "../assets/ourProducts/Worek.webp"
-import Shirt from "../assets/ourProducts/Zwykła.webp"
-import Hat from "../assets/ourProducts/Czapka.webp"
-import WinterHat from "../assets/ourProducts/czapkaZimowa.webp"
-import Tracksuit from "../assets/ourProducts/Dresy.webp"
-import OversizeHoodie from "../assets/ourProducts/BluzaOversize.webp"
-import OversizeTShirt from "../assets/ourProducts/KoszulkaOversize.webp"
+import Shirt from "../assets/ourProducts/Zwykla2.jpg"
+// import Hat from "../assets/ourProducts/Czapka.webp"
+// import WinterHat from "../assets/ourProducts/czapkaZimowa.webp"
+// import Tracksuit from "../assets/ourProducts/Dresy.webp"
+import OversizeHoodie from "../assets/ourProducts/BluzaOversize2.jpg"
+import OversizeTShirt from "../assets/ourProducts/Tshirt2.jpg"
 import Socks from "../assets/ourProducts/Skarpety.webp"
 
 export const products: SingleRealizationType[] = [
-	{
-		img: Shirt,
-		alt: "Bluza Zwykła BluzLo",
-		title: "Bluza Zwykła",
-	},
 	{
 		img: Hoodie,
 		alt: "Bluza Kangurka BluzLo",
@@ -34,6 +29,11 @@ export const products: SingleRealizationType[] = [
 		img: Bag,
 		alt: "Torba na Ramię BluzLo",
 		title: "Torba na Ramię",
+	},
+	{
+		img: Shirt,
+		alt: "Bluza Zwykła BluzLo",
+		title: "Bluza Zwykła",
 	},
 	{
 		img: Sweatshirt,
@@ -55,21 +55,21 @@ export const products: SingleRealizationType[] = [
 		alt: "Worek na Plecy",
 		title: "Worek na Plecy",
 	},
-	{
-		img: Hat,
-		alt: "Czapka z Daszkiem",
-		title: "Czapka z Daszkiem",
-	},
-	{
-		img: Tracksuit,
-		alt: "Dresy",
-		title: "Dresy",
-	},
-	{
-		img: WinterHat,
-		alt: "Czapka Zimowa",
-		title: "Czapka Zimowa",
-	},
+	// {
+	// 	img: Hat,
+	// 	alt: "Czapka z Daszkiem",
+	// 	title: "Czapka z Daszkiem",
+	// },
+	// {
+	// 	img: Tracksuit,
+	// 	alt: "Dresy",
+	// 	title: "Dresy",
+	// },
+	// {
+	// 	img: WinterHat,
+	// 	alt: "Czapka Zimowa",
+	// 	title: "Czapka Zimowa",
+	// },
 	{
 		img: OversizeTShirt,
 		alt: "T-shirt Oversize",
