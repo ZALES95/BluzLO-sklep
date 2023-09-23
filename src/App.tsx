@@ -9,6 +9,7 @@ import Cart from "./pages/Cart/Cart"
 import Pricing from "./pages/Pricing/Pricing"
 import Contact from "./pages/Contact/Contact"
 import BlogArticle from "./pages/BlogArticle/BlogArticle"
+import PaymentPage from "./components/PaymentPage/PaymentPage"
 import { useEffect } from "react"
 
 const Layout = () => {
@@ -34,12 +35,24 @@ function App() {
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />
 					<Route path='/shop' element={<Shop />} />
+					<Route
+						path='/kategoria-produktu/sp-112-warszawa'
+						element={<Shop />}
+					/>
 					<Route path='/shop/:productId' element={<Product />} />
 					<Route path='/blog' element={<Blog />} />
 					<Route path='/blog/:articleName' element={<BlogArticle />} />
 					<Route path='/cennik' element={<Pricing />} />
 					<Route path='/koszyk' element={<Cart />} />
 					<Route path='/kontakt' element={<Contact />} />
+					<Route
+						path='/platnosc-zrealizowana'
+						element={<PaymentPage success={true} />}
+					/>
+					<Route
+						path='/platnosc-niezrealizowana'
+						element={<PaymentPage success={false} />}
+					/>
 				</Route>
 			</Routes>
 		</>

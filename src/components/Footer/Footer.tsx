@@ -156,7 +156,13 @@ const Footer = () => {
 			</div>
 
 			<p className={`${Styles.bottom} wrapper smallText`}>
-				&copy;{currentYear} - BluzLo | Wszystkie prawa zastrzeżone
+				<a
+					href='https://www.linkedin.com/in/jakub-zalewski-6485b925b/'
+					target='_blank'
+					className={`${Styles.linkLinkedin} link-hover`}>
+					Wykonanie: Jakub Zalewski
+				</a>
+				<p>&copy;{currentYear} - BluzLo | Wszystkie prawa zastrzeżone</p>
 			</p>
 		</footer>
 	)

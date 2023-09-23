@@ -77,7 +77,7 @@ const Cart = () => {
 			<div className={Styles.productsBox}>
 				{products?.map((el, i) => (
 					<div className={Styles.singleProduct} key={i}>
-						<Link to={`/sklep/${el.id}`} className={Styles.top}>
+						<Link to={`/shop/${el.id}`} className={Styles.top}>
 							<img
 								src={el.mainImg}
 								alt='produkt bluzlo'

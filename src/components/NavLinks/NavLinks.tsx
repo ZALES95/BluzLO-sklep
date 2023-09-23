@@ -51,7 +51,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleMobileNav, mobile }) => {
 			)}
 			{mobile && (
 				<li onClick={handleMobileNav}>
-					<a href='#o-nas' className={`${Styles.link} link-hover`}>
+					<a href='/#o-nas' className={`${Styles.link} link-hover`}>
 						dlaczego my
 					</a>
 				</li>
