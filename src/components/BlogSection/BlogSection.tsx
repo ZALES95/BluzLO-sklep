@@ -1,9 +1,9 @@
 import Styles from "./BlogSection.module.scss"
 import SingleArticle from "../SingleArticle/SingleArticle"
-import { blogPosts } from "../../DataFetch/fetchBlogPosts"
+import { posts } from "../../DataFetch/fetchPosts"
 
 const Blog = () => {
-	const blogPostsReduced = blogPosts?.slice(0, 3)
+	const blogPostsReduced = posts?.slice(0, 3)
 	return (
 		<section className={`wrapper ${Styles.blogSection}`}>
 			<h2 className='sectionHeading'>dowiedz się więcej!</h2>

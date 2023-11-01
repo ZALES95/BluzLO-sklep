@@ -17,10 +17,10 @@
 }
 
 .otherMsg {
-     min-height: 80vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .gallery {
@@ -188,9 +188,15 @@
 	padding-right: 2rem;
 }
 
-.cartBtn {
+.cartBtn,
+.purchaseInfo {
 	width: fit-content;
 	padding: 1.2rem 2.4rem !important;
+}
+
+.purchaseInfo:hover {
+	background-color: $mainText !important;
+	color: $pureWhite !important;
 }
 
 .cartIcon {

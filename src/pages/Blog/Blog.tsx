@@ -1,4 +1,4 @@
-import { blogPosts } from "../../DataFetch/fetchBlogPosts"
+import { posts } from "../../DataFetch/fetchPosts"
 import Styles from "./Blog.module.scss"
 import SingleArticle from "../../components/SingleArticle/SingleArticle"
 import { useEffect } from "react"
@@ -11,7 +11,7 @@ const Blog = () => {
 		<section className={`wrapper ${Styles.blog}`}>
 			<h2 className={Styles.heading}>Dowiedz się więcej!</h2>
 			<div className={Styles.posts}>
-				{blogPosts?.map((el, index) => (
+				{posts?.map((el, index) => (
 					<SingleArticle
 						key={index}
 						img={el.img}

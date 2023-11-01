@@ -133,7 +133,8 @@ const Product = () => {
 			id === currentProduct?.id &&
 			quantity >= 1 &&
 			isValidSize &&
-			isCorrectColor
+			isCorrectColor &&
+			currentProduct?.attributes?.isForPurchase
 		) {
 			dispatch(addToCart(productForm))
 			setIsCartPopup(true)
@@ -365,13 +366,20 @@ const Product = () => {
 												</div>
 											</div>
 
-											<button
-												className={`mainBtn mainBtn--shop mainBtn--withCart ${Styles.cartBtn}`}
-												onClick={handleCartAdd}>
-												<i
-													className={`fa-solid fa-cart-shopping ${Styles.cartIcon}`}></i>{" "}
-												Dodaj do Koszyka
-											</button>
+											{currentProduct?.attributes?.isForPurchase ? (
+												<button
+													className={`mainBtn mainBtn--shop mainBtn--withCart ${Styles.cartBtn}`}
+													onClick={handleCartAdd}>
+													<i
+														className={`fa-solid fa-cart-shopping ${Styles.cartIcon}`}></i>{" "}
+													Dodaj do Koszyka
+												</button>
+											) : (
+												<p
+													className={`mainBtn mainBtn--shop mainBtn--withCart ${Styles.purchaseInfo}`}>
+													Zamów u przewodniczącego
+												</p>
+											)}
 											<p
 												className={`normalText ${Styles.title} ${Styles.errorMsg}`}>
 												{errorMsg}

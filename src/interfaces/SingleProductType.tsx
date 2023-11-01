@@ -14,5 +14,6 @@ export interface SingleProductType {
 		parameters: { [key: string]: string } //constant for all products with the same name
 		desc: string //constant for all products with the same name
 		sizingImg: string //constant for all products with the same name
+          isForPurchase: boolean
 	}
 }

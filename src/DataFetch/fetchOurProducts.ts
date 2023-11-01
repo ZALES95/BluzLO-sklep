@@ -1,7 +1,7 @@
 import { SingleRealizationType } from "../interfaces/SingleRealization"
 import BaseballJacket from "../assets/ourProducts/Bejsbol.webp"
 import Hoodie from "../assets/ourProducts/Kangurka2.jpg"
-import TShirt from "../assets/ourProducts/Koszulka2.jpg"
+import TShirt from "../assets/ourProducts/TShirt2.webp"
 import Polo from "../assets/ourProducts/Polo.webp"
 import Sweatshirt from "../assets/ourProducts/Rozpinana.webp"
 import Bag from "../assets/ourProducts/Torba.webp"

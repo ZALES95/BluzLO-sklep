@@ -1,39 +1,48 @@
 import { useParams } from "react-router-dom"
-import { blogPosts } from "../../DataFetch/fetchBlogPosts"
+// import { blogPosts } from "../../DataFetch/fetchBlogPosts"
 import Styles from "./BlogArticle.module.scss"
 import SingleArticle from "../../components/SingleArticle/SingleArticle"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
+import { posts } from "../../DataFetch/fetchPosts"
 
 const Blog = () => {
 	const { articleName } = useParams()
-	const currentArticle = blogPosts?.find(el => el.url === articleName)
-	const blogPostsFiltered = blogPosts?.filter(el => el.url !== articleName)
+	const currentArticle = posts?.find(el => el.url === articleName)
+	const blogPostsFiltered = posts?.filter(el => el.url !== articleName)
 	useEffect(() => {
-		document.title = currentArticle?.title || 'BluzLO - Merch dla szkół, uczelni oraz firm'
+		document.title =
+			currentArticle?.title || "BluzLO - Merch dla szkół, uczelni oraz firm"
+		const metaTag = document.createElement("meta")
+		metaTag.name = "description"
+		metaTag.content =
+			currentArticle?.metaDesc ||
+			"Szukasz jakościowego merchu z logiem twojej szkoły, uczelni lub firmy? W BluzLO znajdziesz szeroki wybór unikalnych produktów, które na pewno oddadzą ducha twojej instytucji."
+		document.head.appendChild(metaTag)
+
+		return () => {
+			document.head.removeChild(metaTag)
+		}
 	}, [])
+
 	return (
 		<article className={`wrapper ${Styles.singleBlogArticle}`}>
 			<h1 className={Styles.heading}>{currentArticle?.title}</h1>
-			<div className={Styles.postBody}>
-				<div className={Styles.contentBox}>
-					<img
-						src={currentArticle?.img}
-						alt={currentArticle?.alt}
-						className={Styles.img}
-					/>
-					<p className={`${Styles.desc} smallText`}>
-						{currentArticle?.mainDesc}
-					</p>
-				</div>
-				{currentArticle?.section.map((el, i) => (
-					<div key={i} className={Styles.contentBox}>
-						<p className={`${Styles.smallHeader} normalText`}>{el.header}</p>
 
-						<p className={`${Styles.desc} smallText`}>{el.desc}</p>
-					</div>
-				))}
-			</div>
+			<img
+				src={currentArticle?.img}
+				alt={currentArticle?.alt}
+				className={Styles.img}
+			/>
+
+			{currentArticle?.component && <currentArticle.component />}
+
+			<img
+				src={currentArticle?.img2}
+				alt={currentArticle?.alt2}
+				className={Styles.img}
+			/>
+
 			{blogPostsFiltered.length !== 0 && (
 				<>
 					<p className={`${Styles.smallHeader} normalText`}>
