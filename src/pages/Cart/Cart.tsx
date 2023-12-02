@@ -157,7 +157,7 @@ const Cart = () => {
 					onClick={handlePayment}>
 					Przejdź do Płatności
 				</button>
-				<p className={`smallText ${Styles.totalPrice}`}>lub</p>
+				{/* <p className={`smallText ${Styles.totalPrice}`}>lub</p>
 				<p className={`normalText ${Styles.title} ${Styles.totalPrice}`}>
 					Wykonaj przelew bankowy
 				</p>
@@ -177,7 +177,7 @@ const Cart = () => {
 						Twoje zamówienie zostanie zrealizowane po zaksięgowaniu wpłaty na
 						naszym koncie.
 					</div>
-				)}
+				)} */}
 				<p className={`normalText ${Styles.title} ${Styles.totalPrice}`}>
 					{errorMsg}
 				</p>
