@@ -35,14 +35,10 @@ function App() {
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />
 					<Route path='/shop' element={<Shop />} />
-					<Route
-						path='/kategoria-produktu/sp-112-warszawa'
-						element={<Shop />}
-					/>
 					<Route path='/shop/:productId' element={<Product />} />
 					<Route path='/blog' element={<Blog />} />
 					<Route path='/blog/:articleName' element={<BlogArticle />} />
-					<Route path='/cennik' element={<Pricing />} />
+					<Route path='/wycena' element={<Pricing />} />
 					<Route path='/koszyk' element={<Cart />} />
 					<Route path='/kontakt' element={<Contact />} />
 					<Route

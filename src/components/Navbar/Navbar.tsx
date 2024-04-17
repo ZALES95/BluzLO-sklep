@@ -61,7 +61,7 @@ const Navbar = () => {
 									<i className='fa-solid fa-envelope'></i> bok@bluzlo.pl
 								</Link>
 								<Link
-									to='/cennik'
+									to='/wycena'
 									className={`${Styles.link} link-hover`}
 									style={{ textAlign: "right" }}>
 									Bezpłatna Wycena
@@ -82,8 +82,8 @@ const Navbar = () => {
 					<div className={Styles.right}>
 						<NavLinks mobile={false} />
 						<Link
-							to='/cennik'
-							className={`mainBtn mainBtn--small ${Styles.pricingBtn}`}>
+							to='/wycena'
+							className={`mainBtn mainBtn--small mainBtn--alternative ${Styles.pricingBtn}`}>
 							Bezpłatna Wycena
 						</Link>
 

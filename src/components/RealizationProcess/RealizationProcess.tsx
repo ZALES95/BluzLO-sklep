@@ -16,7 +16,6 @@ const RealizationProcess = () => {
 						stageDesc={el.stageDesc}
 					/>
 				))}
-				
 			</div>
 			<div className={Styles.filmBox}>
 				<a
@@ -26,10 +25,14 @@ const RealizationProcess = () => {
 					className={`${Styles.link} ${Styles.iconLink}`}>
 					<i className={`fa-solid fa-circle-play ${Styles.icon}`}></i>
 				</a>
-				<p className={`${Styles.link} smallText`}>
+				<a
+					className={`${Styles.link} smallText`}
+					href='https://www.youtube.com/watch?v=i9DygmQr90E'
+					target='_blank'
+					aria-label='Link do filmiku z realizacją'>
 					Zobacz film uczniów toruńskiego liceum, którzy podzielą się
 					doświadczeniami z procesu tworzenia odzieży szkolnej BluzLO.
-				</p>
+				</a>
 			</div>
 		</section>
 	)

@@ -1,13 +1,13 @@
 export const allQuestionsArr: { question: string; answer: string }[] = [
 	{
 		question: "Ile trwa realizacja zamówienia? ",
-		answer: " Nie więcej niż 14 dni roboczych. Zazwyczaj trwa to krócej :).",
+		answer: "Zazwyczaj nie więcej niż 14 dni roboczych. Z reguły trwa to krócej :).",
 	},
-	{
-		question: "Jak odebrać 1h zajęć za darmo w ENE Edukacja?",
-		answer:
-			"Kontaktując się z ENE Edukacja podaj kod: bluzlo, z tym kodem otrzymasz także bezpłatne pierwsze pełne zajęcia z korepetytorem.",
-	},
+	// {
+	// 	question: "Jak odebrać 1h zajęć za darmo w ENE Edukacja?",
+	// 	answer:
+	// 		"Kontaktując się z ENE Edukacja podaj kod: bluzlo, z tym kodem otrzymasz także bezpłatne pierwsze pełne zajęcia z korepetytorem.",
+	// },
 	{
 		question: "Jakie są zasady reklamacji?",
 		answer:
@@ -21,5 +21,10 @@ export const allQuestionsArr: { question: string; answer: string }[] = [
 		question: "Jak dobrać odpowiedni rozmiar?",
 		answer:
 			"Pod każdym produktem w naszym sklepie internetowym jest zamieszczone zdjęcie z tabelą rozmiarów dla danego produktu. Ponadto, tabele rozmiarów są wysyłane do szkół wraz z ofertą, tak aby każdy uczeń mógł dobrać dla siebie odpowiedni rozmiar.",
+	},
+	{
+		question: "Jak odebrać zamówiony produkt?",
+		answer:
+			"Gotowe zamówienie można odebrać w szkole. Każdy produkt jest opisany imieniem, nazwiskiem oraz klasą.",
 	},
 ]

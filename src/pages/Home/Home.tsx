@@ -9,7 +9,7 @@ import Cooperation from "../../components/Cooperation/Cooperation"
 import FAQ from "../../components/FAQ/FAQ"
 import BlogSection from "../../components/BlogSection/BlogSection"
 import QuickMsg from "../../components/QuickMsg/QuickMsg"
-import EneEducation from "../../components/EneEducation/EneEducation"
+// import EneEducation from "../../components/EneEducation/EneEducation"
 import { useEffect } from "react"
 
 const Home = () => {
@@ -21,14 +21,14 @@ const Home = () => {
 			<Header />
 			<main className='main'>
 				<OurProducts />
+				<Aboutus />
 				<Offer />
 				<RealizationProcess />
 				<OurRealizations />
 				<Opinions />
-				<Aboutus />
 				<Cooperation />
 				<FAQ />
-				<EneEducation />
+				{/* <EneEducation /> */}
 				<BlogSection />
 			</main>
 			<QuickMsg />

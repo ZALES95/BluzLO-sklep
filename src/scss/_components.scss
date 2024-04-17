@@ -61,6 +61,24 @@
 			margin-bottom: 0;
 		}
 	}
+	&--alternative {
+		font-size: 1.3rem;
+		text-transform: none;
+		color: $pureWhite;
+		background: $mainText;
+		border: 1px solid $mainText;
+		padding: 1.2rem 2.8rem;
+		margin: 0;
+
+		&:hover {
+			background-color: $pureWhite;
+			color: $mainText;
+		}
+
+		&:first-of-type {
+			margin-bottom: 0;
+		}
+	}
 	&--shop {
 		text-transform: none;
 		color: $pureWhite;
@@ -201,15 +219,18 @@
 	text-align: center;
 	z-index: 5;
 
-     &--section {
-          padding: 14rem 2rem;
-     }
+	&--section {
+		padding: 14rem 2rem;
+	}
 }
 
 .sectionPadding {
 	padding: 10rem 3rem;
-}
 
+	&--withoutTop {
+		padding-top: 0;
+	}
+}
 
 @media (min-width: 992px) {
 	.white-block {
@@ -226,6 +247,10 @@
 	}
 	.sectionPadding {
 		padding: 13rem 5rem;
+
+		&--withoutTop {
+			padding-top: 0;
+		}
 	}
 	.mainBtn {
 		font-size: 1.8rem;

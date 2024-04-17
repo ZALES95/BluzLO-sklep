@@ -18,32 +18,32 @@ export const singleStageData = [
 		stageNumber: "3",
 		stageTitle: "Prototypy",
 		stageDesc:
-			"W ciągu 7 dni roboczych do szkoły zostaną dostarczone darmowe próbne bluzy z haftem szkoły, aby można było ocenić, czy produkty BluzLO spełniają oczekiwania. Warto przekonać się na własnej oczy, jak wysokiej jakości jest haft na naszych produktach.",
+			"Na życzenie wyślemy do Twojej placówki kilka pokazowych produktów. Warto przekonać się na własnej oczy, jak wysokiej jakości jest haft na naszych produktach.",
 	},
-	{
-		iconClass: "fa-solid fa-camera",
-		stageNumber: "4",
-		stageTitle: "Sesja Zdjęciowa",
-		stageDesc:
-			"Następnym etapem jest sesja zdjęciowa z uczniami ubranymi w Wasze przyszłe bluzy. Gdy zdjęcia są już gotowe, przygotowujemy plakaty i posty na social media, aby wszyscy uczniowie byli poinformowani o nadchodzących produktach.",
-	},
+	// {
+	// 	iconClass: "fa-solid fa-camera",
+	// 	stageNumber: "4",
+	// 	stageTitle: "Sesja Zdjęciowa",
+	// 	stageDesc:
+	// 		"Następnym etapem jest sesja zdjęciowa z uczniami ubranymi w Wasze przyszłe bluzy. Gdy zdjęcia są już gotowe, przygotowujemy plakaty i posty na social media, aby wszyscy uczniowie byli poinformowani o nadchodzących produktach.",
+	// },
 	{
 		iconClass: "fa-solid fa-cart-shopping",
-		stageNumber: "5",
+		stageNumber: "4",
 		stageTitle: "Zamówienia",
 		stageDesc:
 			"Zamówienia można składać na dwa sposoby - w dedykowanym sklepie na naszej stronie lub jako zamówienie grupowe. Okres na zamówienia trwa 2 tygodnie.",
 	},
 	{
 		iconClass: "fa-solid fa-truck-fast",
-		stageNumber: "6",
+		stageNumber: "5",
 		stageTitle: "Produkcja i Wysyłka",
 		stageDesc:
-			"Od złożenia zamówienia do zakończenia produkcji potrzebujemy tylko 10 dni roboczych. Na bieżąco będziesz informowany/a o statusie realizacji zamówienia. Bluzy dostarczymy bezpłatnie do Twojej szkoły za pośrednictwem kuriera.",
+			"Od złożenia zamówienia do zakończenia produkcji potrzebujemy średnio 12 dni roboczych. Na bieżąco będziesz informowany/a o statusie realizacji zamówienia. Bluzy dostarczymy bezpłatnie do Twojej szkoły za pośrednictwem kuriera.",
 	},
 	{
 		iconClass: "fa-solid fa-handshake",
-		stageNumber: "7",
+		stageNumber: "6",
 		stageTitle: "Odbiór",
 		stageDesc:
 			"W celu ułatwienia procesu odbioru bluz będą one posegregowane klasami. Na każdej z nich będzie naklejona nalepka z imieniem i nazwiskiem właściciela, aby każdy otrzymał dokładnie to, co zamówił.",

@@ -5,7 +5,7 @@ const QuickMsg = () => {
 	return (
 		<>
 			<a
-				href='tel:+48730118620'
+				href='tel:+48532139222'
 				className={`${Styles.iconBox} ${Styles.phone}`}
 				aria-label='Link do Kontaktu'>
 				<i className={`fa-solid fa-phone-volume ${Styles.icon}`}></i>

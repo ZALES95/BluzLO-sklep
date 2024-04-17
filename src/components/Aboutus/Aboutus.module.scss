@@ -8,12 +8,20 @@
 }
 
 .stats {
-	margin-top: 6.5rem;
+	// margin-top: 6.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 3rem;
+	gap: 6rem;
 	flex-direction: column;
+}
+
+.statsBox {
+	display: flex;
+	text-align: center;
+	gap: 3rem;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .singleStat {
@@ -50,6 +58,13 @@
 	text-align: center;
 }
 
+.name {
+	font-weight: 700;
+	font-size: 3.6rem;
+	text-align: center;
+	margin-bottom: -3rem;
+}
+
 .title {
 	margin-left: 0.3rem;
 }
@@ -60,14 +75,24 @@
 		margin-top: 0.6rem;
 		align-self: start;
 	}
-	.statNumber {
+	.name {
+		font-weight: 700;
 		font-size: 4.8rem;
+		margin-bottom: -5rem;
 	}
+	// .stats {
+	// 	margin-top: 7.5rem;
+	// 	gap: 5rem;
+	// 	flex-direction: row;
+	// 	flex-wrap: wrap;
+	// }
+
 	.stats {
-		margin-top: 7.5rem;
-		gap: 5rem;
-		flex-direction: row;
-		flex-wrap: wrap;
+		gap: 9rem;
+	}
+
+	.statsBox {
+		gap: 4.5rem;
 	}
 	.singleStat {
 		flex-direction: row;
@@ -77,5 +102,6 @@
 
 	.statNumber {
 		text-align: left;
+		font-size: 4.8rem;
 	}
 }

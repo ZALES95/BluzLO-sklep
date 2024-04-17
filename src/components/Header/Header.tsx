@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Styles from "./Header.module.scss"
-import OfferPdf from "../../assets/Oferta-BluzLO.pdf"
+import OfferPdf from "../../assets/Oferta-BluzLO-2024.pdf"
 
 const Header = () => {
 	return (
@@ -13,7 +13,7 @@ const Header = () => {
 						uczelni oraz firm
 					</h1>
 					<div className={Styles.buttons}>
-						<Link to='/cennik'>
+						<Link to='/wycena'>
 							<button className='mainBtn'>Bezpłatna Wycena</button>
 						</Link>
 						<a href={OfferPdf} target='_blank'>
@@ -72,8 +72,8 @@ const Header = () => {
 					premium
 				</p>
 				<p className={Styles.feature}>
-					<i className={`fa-solid fa-camera ${Styles["fa-icon"]}`}></i> sesja
-					zdjęciowa
+					<i className={`fa-solid fa-truck-fast ${Styles["fa-icon"]}`}></i>{" "}
+					szybka realizacja
 				</p>
 			</div>
 		</header>

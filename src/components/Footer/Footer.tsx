@@ -18,9 +18,9 @@ const Footer = () => {
 							/>
 						</Link>
 						<a
-							href='tel:+48730118620'
+							href='tel:+532139222'
 							className={`${Styles.phone} ${Styles.link} normalText`}>
-							+48 730 118 620
+							+48 532 139 222
 						</a>
 						<a
 							href='mailto:bok@bluzlo.pl'

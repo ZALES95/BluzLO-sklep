@@ -1,6 +1,6 @@
 import Styles from "./Offer.module.scss"
 import { Link } from "react-router-dom"
-import OfferPdf from "../../assets/Oferta-BluzLO.pdf"
+import OfferPdf from "../../assets/Oferta-BluzLO-2024.pdf"
 
 const Offer = () => {
 	return (
@@ -17,7 +17,7 @@ const Offer = () => {
 						odezwie się do Ciebie!
 					</p>
 					<div className={Styles.buttons}>
-						<Link to='/cennik'>
+						<Link to='/wycena'>
 							<button className='mainBtn mainBtn--section'>
 								Bezpłatna Wycena
 							</button>

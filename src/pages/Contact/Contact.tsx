@@ -63,21 +63,26 @@ const Contact = () => {
 				<div className={Styles.singleInput}>
 					<label htmlFor='schoolName' className='smallText'>
 						<i className={`fa-solid fa-building ${Styles.icon}`}></i> Placówka
-						(opcjonalne)
 					</label>
-					<input name='schoolName' className={Styles.input} id='schoolName' />
+					<input
+						name='schoolName'
+						className={Styles.input}
+						id='schoolName'
+						required
+					/>
 				</div>
 
 				<div className={Styles.singleInput}>
 					<label htmlFor='phoneNumber' className='smallText'>
 						<i className={`fa-solid fa-phone ${Styles.icon}`}></i> Numer
-						telefonu (opcjonalne)
+						telefonu
 					</label>
 					<input
 						type='tel'
 						name='phoneNumber'
 						className={Styles.input}
 						id='phoneNumber'
+						required
 					/>
 				</div>
 				<div className={Styles.singleInput}>
