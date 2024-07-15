@@ -5,8 +5,10 @@ import emailjs from "@emailjs/browser"
 import Policy from "../../assets/PolitykaPrywatności.pdf"
 
 const Pricing = () => {
-     useEffect(() => {
-		document.title = 'Bezpłatna wycena merchu z logiem szkoły, uczelni oraz firmy'
+	useEffect(() => {
+		document.title =
+			"Bezpłatna wycena merchu z logiem szkoły, uczelni oraz firmy"
+
 	}, [])
 
 	const form = useRef(null)
